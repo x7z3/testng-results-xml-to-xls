@@ -1,0 +1,8 @@
+.idea
+target
+*.xlsx
+*.xls
+testng-results.xml
+/src/test/**/*.*
+
+
