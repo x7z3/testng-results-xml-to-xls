@@ -85,7 +85,7 @@ public class XlsBuilder {
                     cellStyle.setVerticalAlignment(VerticalAlignment.CENTER);
                     cellStyle.setFillForegroundColor(IndexedColors.GREEN.getIndex());
                     cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                }).saveStyle("pass")
+                }).saveStyle(PASS_FONT)
 
                 .createStyle((cellStyle, font) -> {
                     font.setBold(true);
@@ -96,7 +96,7 @@ public class XlsBuilder {
                     cellStyle.setVerticalAlignment(VerticalAlignment.CENTER);
                     cellStyle.setFillForegroundColor(IndexedColors.RED.getIndex());
                     cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                }).saveStyle("fail")
+                }).saveStyle(FAIL_FONT)
         ;
         testListMap.forEach(this::createSheet);
         xlsEditor.saveToFile(new File(suite.getName() + ".xlsx"));
